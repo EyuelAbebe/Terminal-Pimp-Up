@@ -1,3 +1,12 @@
+# Tell ls to be colourful
+export CLICOLOR=1
+export PATH=$PATH:/Users/rc/Installers/apache-karaf-2.2.8/bin
+export mybatchs=/Users/rc/mybatchs
+export EDITOR='subl -w'
+export FUSE_HOME=/Applications/FuseESBEnterprise-7.0.0/bin
+# export PATH=$PATH:/Applications
+export PATH=$PATH:$mybatchs
+
 # pimping up my iterm like paul irish
 
 PATH=$PATH:~/Data/Scripts:~/Data/Utils/rar:~/_Applications:~/_Applications/lynx
@@ -65,4 +74,6 @@ function set_prefix {
 # \033[s = save cursor position
 # \033[u = restore cursor position
  
-PS1='${MAGENTA}\u${WHITE} in ${GREEN}\w${WHITE}${MAGENTA}`__git_ps1 " on %s"`${WHITE}\r\n`set_prefix`${NORMAL}${CYAN}\033[s\033[60C (`date "+%a, %b %d"`)\033[u${WHITE} '
+# PS1='${MAGENTA}\u${WHITE} in ${GREEN}\w${WHITE}\$ '
+# PS1="\u@\h:\w on\e[0;35m$(__git_ps1)\e[m\$ "
+PS1='\n\[\033[0;35m\]\u\[\033[0;32m\]\w\[\033[0m\]$(__git_ps1)\n[$(date +%H:%M:%S)]\[\033[0m\] '
